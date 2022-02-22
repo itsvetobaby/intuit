@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.4.4/dist/panzoom.min.js"></script>
+
+</head>
+<body>
+    <style>
+        @font-face {
+	font-family: ubuntuI ;
+	src: url(./ubuntu.bold-italic.ttf);
+}
+
+        body, html{
+            font-family: sans-serif;
+            background-color: rgb(46, 46, 46);
+            height: 100vh;
+            margin-left: 0px;
+        }
+        .box{
+            background-color: rgb(238, 248, 253);
+            box-shadow: rgba(201, 201, 201, 0.2) 0px 2px 8px 0px;
+            opacity: 0.9;
+            
+            border-radius: 10px;
+            padding-bottom: 4em;
+            width: fit-content;
+            height: fit-content;
+            margin-right: 3em;
+            margin-top: 3em;
+        }
+
+        .boxO{
+            background-color: rgb(255, 202, 123);
+            box-shadow: rgba(201, 201, 201, 0.2) 0px 2px 8px 0px;
+            opacity: 0.9;
+            
+            border-radius: 10px;
+            padding-bottom: 4em;
+            width: fit-content;
+            height: fit-content;
+            margin-right: 3em;
+            margin-top: 3em;
+        }
+
+        .sideBar{
+            z-index: 101;
+            width: 4em;
+            height: 7em;
+        }
+
+
+        .inner{
+            padding: 1em;
+            width: 17em;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .big{
+            font-size: 6em;
+            margin: 0px;
+            margin-left: 10px;
+        }
+
+        .bigger{
+            font-size: 8em;
+            margin: 0px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .red{
+            color:  rgb(236, 92, 92);
+
+        }
+
+        .cream{
+            color: antiquewhite;
+
+        }
+
+        .orange{
+            color: #ffa500;
+
+        }
+
+        textarea{
+            border: 2px solid white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 202, 123);
+            padding: 4px;
+        }
+
+        .containerGrid {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . . . . . . . . ."
+    ". . . . . . . . . . ."
+    ". . . . . . . . . . ."
+    ". . . . . . . . . . .";
+}
+
+    </style>
+
+    <div class="" style="position: fixed; top: 0px; background-color: rgba(46, 46, 46, 0); height: fit-content; width: 100%; z-index: 1001;">
+        <div class="" style="display: flex; border-bottom: 2px solid rgba(128, 128, 128, 0); margin: 1em;">
+            <h2 style="color: white; font-family: ubuntuI; font-size: 60px; margin: 0px; margin-left: 0em;">Enth</h2>
+        </div>
+        <div class="" style="display: flex; margin: 1em;">
+            <h2 style="color: rgb(209, 209, 209);  font-size: 30px; margin: 0px; margin-left: 0em;">All data</h2>
+            <div class="" style="margin: auto;"></div>
+            <div class="" style="float: right;">
+                <h1 class="big red">J1</h1>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="" style="height: 100vh;">
+        <div class="" style="position: fixed;" id="panzoom-element">
+            <div class="">
+                <h1 class="bigger red">Journals</h1>
+                
+            </div>
+            <div class="" style="" >
+                
+                
+                <div class="" style="display: flex;">
+                    <div class="box">
+                        <div class="inner">
+                            <h2>Headding</h2>
+                            <hr>
+                            <p class="texter">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi consectetur inventore itaque voluptatum necessitatibus saepe mollitia fugiat error? Distinctio commodi quis voluptates incidunt, assumenda modi soluta enim obcaecati delectus nam dolor ipsam laboriosam, ratione in fuga itaque odio. Blanditiis repellat maiores quis veniam accusantium sed illo libero, nostrum in?
+                            </p>
+                        </div>
+                        <div class="" style="display: flex;">
+                            <div class="sideBar red"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#5d5d5d" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+                            <h1 class="big red">J1</h1>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <div class="inner">
+                            <h2>Headding</h2>
+                            <hr>
+                            <p class="texter">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi consectetur inventore itaque voluptatum necessitatibus saepe mollitia fugiat error? Distinctio commodi quis voluptates incidunt, assumenda modi soluta enim obcaecati delectus nam dolor ipsam laboriosam, ratione in fuga itaque odio. Blanditiis repellat maiores quis veniam accusantium sed illo libero, nostrum in?
+                            </p>
+                        </div>
+                        <div class="" style="display: flex;">
+                            <div class="sideBar red"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#5d5d5d" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+                            <h1 class="big red">J1.1</h1>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <div class="inner">
+                            <h2>Headding</h2>
+                            <hr>
+                            <p class="texter">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi consectetur inventore itaque voluptatum necessitatibus saepe mollitia fugiat error? Distinctio commodi quis voluptates incidunt, assumenda modi soluta enim obcaecati delectus nam dolor ipsam laboriosam, ratione in fuga itaque odio. Blanditiis repellat maiores quis veniam accusantium sed illo libero, nostrum in?
+                            </p>
+                        </div>
+                        <div class="" style="display: flex;">
+                            <div class="sideBar red"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#5d5d5d" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+                            <h1 class="big red">J1.2</h1>
+                        </div>
+    
+                    </div>
+                </div>  
+                <div class="" style="display: flex">
+
+                    <div class="box">
+                        <div class="">
+                            <div class="inner">
+                                <h2>Headding</h2>
+                                <hr>
+                                <p class="texter">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi consectetur inventore itaque voluptatum necessitatibus saepe mollitia fugiat error? Distinctio commodi quis voluptates incidunt, assumenda modi soluta enim obcaecati delectus nam dolor ipsam laboriosam, ratione in fuga itaque odio. Blanditiis repellat maiores quis veniam accusantium sed illo libero, nostrum in?
+                                </p>
+                            </div>
+                            <div class="" style="display: flex;">
+                                <div class="sideBar red"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#5d5d5d" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+
+                                <h1 class="big red">J2</h1>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <div class="box" style="width: 50em;">
+                        <div class="">
+                            <div class="containerGrid" style="padding: 1em;">
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: rgb(80, 218, 172); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: rgb(83, 206, 165); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(98, 197, 164); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(125, 204, 178); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(45, 179, 134); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(156, 252, 220); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(56, 190, 146); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(71, 182, 145); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(114, 224, 188); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(101, 185, 157); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(69, 143, 118); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(111, 209, 176); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: rgb(79, 160, 133); border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                <div class="" style="background-color: aquamarine; border-radius: 3px"><p style="color: #ffffff00">.</p></div>
+
+
+
+
+                                
+                            </div>
+                            <div class="" style="display: flex;">
+                                <div class="sideBar red"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#5d5d5d" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+
+                                <h1 class="big red">J2</h1>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="inner">
+                        <h2>Headding</h2>
+                        <hr>
+                        <p class="texter">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi consectetur inventore itaque voluptatum necessitatibus saepe mollitia fugiat error? Distinctio commodi quis voluptates incidunt, assumenda modi soluta enim obcaecati delectus nam dolor ipsam laboriosam, ratione in fuga itaque odio. Blanditiis repellat maiores quis veniam accusantium sed illo libero, nostrum in?
+                        </p>
+                    </div>
+                    <div class="" style="display: flex;">
+                        <div class="sideBar red"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#5d5d5d" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+
+                        <h1 class="big red">J3</h1>
+                    </div>
+
+                </div>
+   
+            </div>
+        </div>
+            <div class="" style="position: fixed;" id="panzoom-element2">
+               
+                <div class="">
+                    <h1 class="bigger cream">Definitions</h1>
+                    
+                </div>
+                <div class="" style="display: flex" >
+                    
+                    
+    
+                    <div class="box">
+                        <div class="inner">
+                            <h2>Headding</h2>
+                            <hr>
+                            <p class="texter">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi consectetur inventore itaque voluptatum necessitatibus saepe mollitia fugiat error? Distinctio commodi quis voluptates incidunt, assumenda modi soluta enim obcaecati delectus nam dolor ipsam laboriosam, ratione in fuga itaque odio. Blanditiis repellat maiores quis veniam accusantium sed illo libero, nostrum in?
+                            </p>
+                        </div>
+                        <div class="" style="display: flex;">
+                            <div class="sideBar red"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#5d5d5d" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+                            <h1 class="big cream">D1</h1>
+                        </div>
+    
+                    </div>
+                </div>
+
+   
+            </div>
+
+            <div class="" style="position: fixed;"id="panzoom-element3">
+               
+                <div class="">
+              
+                    <svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#ffa500" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>
+                    
+                </div>
+                <div class="" style="display: flex;  border-radius: 15px;" >
+                    
+                    
+    
+                    <div class="boxO" style="">
+                        <div class="inner">
+                            <h2>This Note...</h2>
+                            <hr>
+                            <p class="texter">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </p>
+                        </div>
+                        <div class="" style="display: flex;">
+                            <div class="sideBar red"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 24 24" fill="none" stroke="#5d5d5d" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+                            <h1 class="big orange">N1</h1>
+                  
+                            
+                        </div>
+    
+                    </div>
+                </div>
+
+   
+            </div>
+    
+<!-- 
+        <div class="box" style="display: flex" id="panzoom-element2">
+            <div class="inner">
+                <h2>Headding</h2>
+                <hr>
+                <p class="texter">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum commodi consectetur inventore itaque voluptatum necessitatibus saepe mollitia fugiat error? Distinctio commodi quis voluptates incidunt, assumenda modi soluta enim obcaecati delectus nam dolor ipsam laboriosam, ratione in fuga itaque odio. Blanditiis repellat maiores quis veniam accusantium sed illo libero, nostrum in?
+                </p>
+            </div>
+            <div class="sideBar">.</div>
+        </div> -->
+    
+    
+    </div>
+
+
+
+
+
+
+<script>
+    const elem = document.getElementById('panzoom-element')
+
+
+    const panzoom = Panzoom(elem, {
+        maxScale: 3,
+        minScale: 0.4,
+
+        excludeClass: 'inner'
+    })
+
+    panzoom.pan(0, 0)
+    panzoom.zoom(0.7, { animate: true })
+
+    // Panning and pinch zooming are bound automatically (unless disablePan is true).
+    // There are several available methods for zooming
+    // that can be bound on button clicks or mousewheel.
+    elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)
+
+
+
+    ///////////////////
+
+    const elem2 = document.getElementById('panzoom-element2')
+
+
+const panzoom2 = Panzoom(elem2, {
+    maxScale: 3,
+    minScale: 0.4,
+
+    excludeClass: 'inner'
+})
+panzoom2.pan(0, 0)
+panzoom2.zoom(0.7, { animate: true })
+
+// Panning and pinch zooming are bound automatically (unless disablePan is true).
+// There are several available methods for zooming
+// that can be bound on button clicks or mousewheel.
+// elem2.addEventListener('click', panzoom2.zoomIn)
+elem2.parentElement.addEventListener('wheel', panzoom2.zoomWithWheel)
+
+
+
+///////////////////
+
+ ///////////////////
+
+ const elem3 = document.getElementById('panzoom-element3')
+
+
+
+const panzoom3 = Panzoom(elem3, {
+    maxScale: 3,
+    minScale: 0.4,
+
+    excludeClass: 'inner'
+})
+panzoom3.pan(0, 0)
+panzoom3.zoom(0.7, { animate: true })
+
+// Panning and pinch zooming are bound automatically (unless disablePan is true).
+// There are several available methods for zooming
+// that can be bound on button clicks or mousewheel.
+
+
+elem3.parentElement.addEventListener('wheel', panzoom3.zoomWithWheel)
+
+
+
+///////////////////
+
+
+</script>
+
+</body>
+</html>
